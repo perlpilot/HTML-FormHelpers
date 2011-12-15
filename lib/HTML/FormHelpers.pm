@@ -76,7 +76,7 @@ sub process_attributes {
     for my $i (0..$#_) {
         if (ref $_[$i] eq 'HASH') {
             my $attrs = splice @_, $i, 1;
-            return join " ", map { $_ . '="' . $_[0]->{$_} . '"' } keys %{$_[0]};
+            return join " ", map { $_ . '="' . $attrs->{$_} . '"' } keys %{$attrs};
         }
     }
     return "";
