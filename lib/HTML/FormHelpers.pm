@@ -99,7 +99,7 @@ sub radio {
     while ($i < @$values) { 
         my ($val,$disp) = @{$values}[$i, $i+1];
         my $checked = $on eq $val ? 'checked="checked"' : "";
-        push @ret, qq(<input type="radio" name="$fname" value="$val" $checked $attributes />$disp);
+        push @ret, qq(<label><input type="radio" name="$fname" value="$val" $checked $attributes />$disp</label>);
     } continue { $i+=2 }
     return ref $sep eq 'ARRAY' ? @ret : join $sep,@ret;
 }
