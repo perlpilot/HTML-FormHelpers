@@ -83,7 +83,8 @@ sub process_attributes {
 }
 
 sub process_args {
-    my $obj = shift if blessed $_[0];
+    my $obj;
+    $obj = shift if blessed $_[0];
     my $attributes = &process_attributes;
     my $idx = try { $obj->can('id') && "[" . ($obj->id // "") . "]" } catch { "" };
     my $name = $_[0] . $idx;
