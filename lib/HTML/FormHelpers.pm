@@ -12,7 +12,7 @@ our %EXPORT_TAGS = ( all => [ qw(radio text select button hidden checkbox )] );
 
 =head1 SYNOPSIS
 
-    use HTML::FormHelpers;
+    use HTML::FormHelpers qw<:all>;
 
     print text('foo');   # generate HTML for an input tag
 
